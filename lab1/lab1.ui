@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>741</width>
+    <height>717</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(38, 41, 45);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_header">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>741</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(28, 31, 35)</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>6</y>
+       <width>148</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(160, 160, 160)</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string>AI Lab1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_exp">
+     <property name="geometry">
+      <rect>
+       <x>696</x>
+       <y>10</y>
+       <width>15</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgb(0, 170, 0);
+	border-radius: 7px;
+	text-align: center;
+}
+
+QPushButton:hover{
+	background-color: rgb(0, 111, 0);
+}
+
+QPushButton:pressed{
+	background-color: rgb(0, 153, 0);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_close">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>10</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgb(255, 0, 0);
+	border-radius: 8px;
+	text-align: center;
+}
+
+QPushButton:hover{
+	background-color: rgb(175, 0, 0);
+}
+
+QPushButton:pressed{
+	background-color: rgb(229, 0, 0);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>110</y>
+      <width>401</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(29, 32, 35);
+border-radius:15px;</string>
+    </property>
+    <widget class="QLabel" name="botpic">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>351</width>
+       <height>371</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>100</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>🤖</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_answer">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>330</y>
+       <width>351</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>50</y>
+      <width>381</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Intelligent BOT</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPoints">
+    <property name="geometry">
+     <rect>
+      <x>621</x>
+      <y>270</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(29, 32, 35);
+color: rgb(255, 255, 255);
+border-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>230</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Points</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonStop">
+    <property name="geometry">
+     <rect>
+      <x>621</x>
+      <y>350</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(255, 0, 0);
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(206, 0, 0);
+}
+
+QPushButton:pressed {
+	background-color: rgb(234, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Stop</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>600</y>
+      <width>401</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(29, 32, 35);
+color: rgb(255, 255, 255);
+border:none;
+border-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>type some text</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonSend">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>610</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bodoni MT Black</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+    </property>
+    <property name="text">
+     <string>➤</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1119</width>
+    <height>704</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(38, 41, 45);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_header">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1119</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(28, 31, 35)</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_exp">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>8</y>
+       <width>15</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgb(0, 170, 0);
+	border-radius: 7px;
+	text-align: center;
+}
+
+QPushButton:hover{
+	background-color: rgb(0, 111, 0);
+}
+
+QPushButton:pressed{
+	background-color: rgb(0, 153, 0);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_close">
+     <property name="geometry">
+      <rect>
+       <x>1100</x>
+       <y>8</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgb(255, 0, 0);
+	border-radius: 8px;
+	text-align: center;
+}
+
+QPushButton:hover{
+	background-color: rgb(175, 0, 0);
+}
+
+QPushButton:pressed{
+	background-color: rgb(229, 0, 0);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="EcgWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</y>
+      <width>1060</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(28, 31, 35);
+border-radius: 15px;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>35</y>
+      <width>350</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>17</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 31, 35);
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string>ECG Generator</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_teeth">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>520</y>
+      <width>351</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(28, 31, 35);
+border-radius: 10px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>18</x>
+       <y>20</y>
+       <width>321</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="labelAlignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="formAlignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+      <property name="horizontalSpacing">
+       <number>100</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>82</number>
+      </property>
+      <property name="rightMargin">
+       <number>7</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="radioButton_P">
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>17</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>P</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QRadioButton" name="radioButton_S">
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>17</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+</string>
+        </property>
+        <property name="text">
+         <string>S</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="radioButton_Q">
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>17</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+</string>
+        </property>
+        <property name="text">
+         <string>Q</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QRadioButton" name="radioButton_ST">
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>17</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+</string>
+        </property>
+        <property name="text">
+         <string>ST</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QRadioButton" name="radioButton_R">
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>17</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+</string>
+        </property>
+        <property name="text">
+         <string>R</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QRadioButton" name="radioButton_T">
+        <property name="maximumSize">
+         <size>
+          <width>41</width>
+          <height>17</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+</string>
+        </property>
+        <property name="text">
+         <string>T</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_params">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>500</y>
+      <width>581</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(28, 31, 35);
+border-radius: 10px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QSlider" name="AmplitudeHorizontalSlider">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>20</y>
+       <width>301</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 8px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    background: qlineargradient(spread:pad, x1:0, y1:0.79, x2:0.909, y2:0.784091, stop:0 rgba(103, 111, 122, 255), stop:1 rgba(255, 255, 255, 255));
+    margin: 2px 0;
+	border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+    border: 1px solid #5c5c5c;
+    width: 18px;
+    margin: -2px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 5px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>-10</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>15</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 31, 35);
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string>Амплітуда</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSlider" name="TimeHorizontalSlider">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>50</y>
+       <width>301</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 8px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    background: qlineargradient(spread:pad, x1:0, y1:0.79, x2:0.909, y2:0.784091, stop:0 rgba(103, 111, 122, 255), stop:1 rgba(255, 255, 255, 255));
+    margin: 2px 0;
+	border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+    border: 1px solid #5c5c5c;
+    width: 18px;
+    margin: -2px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 5px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>-10</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>45</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 31, 35);
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string>Час</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QSlider" name="B1HorizontalSlider">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>120</y>
+       <width>301</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 8px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    background: qlineargradient(spread:pad, x1:0, y1:0.79, x2:0.909, y2:0.784091, stop:0 rgba(103, 111, 122, 255), stop:1 rgba(255, 255, 255, 255));
+    margin: 2px 0;
+	border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+    border: 1px solid #5c5c5c;
+    width: 18px;
+    margin: -2px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 5px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QSlider" name="B2HorizontalSlider">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>150</y>
+       <width>301</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 8px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    background: qlineargradient(spread:pad, x1:0, y1:0.79, x2:0.909, y2:0.784091, stop:0 rgba(103, 111, 122, 255), stop:1 rgba(255, 255, 255, 255));
+    margin: 2px 0;
+	border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
+    border: 1px solid #5c5c5c;
+    width: 18px;
+    margin: -2px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 5px;
+}
+</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>80</y>
+       <width>301</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 31, 35);
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string>Ширина</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_hr">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>520</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(28, 31, 35);
+border-radius: 10px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QSpinBox" name="spinBoxHr">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>11</y>
+       <width>81</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSpinBox {
+	color: rgb(255, 255, 255);
+}
+
+QSpinBox::up-button {
+	
+}
+
+QSpinBox::up-button:hover {
+	
+}
+
+QSpinBox::up-button:pressed {
+
+}
+
+QSpinBox::up-arrow {
+
+}
+
+QSpinBox::up-arrow:disabled, QSpinBox::up-arrow:off { /* off state when value is max */
+
+}
+
+QSpinBox::down-button {
+;
+}
+
+QSpinBox::down-button:hover {
+
+}
+
+QSpinBox::down-button:pressed {
+
+}
+
+QSpinBox::down-arrow {
+
+}
+
+QSpinBox::down-arrow:disabled,
+QSpinBox::down-arrow:off { /* off state when value in min */
+
+}</string>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="accelerated">
+      <bool>false</bool>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="suffix">
+      <string/>
+     </property>
+     <property name="prefix">
+      <string/>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+     <property name="value">
+      <number>60</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>500</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 31, 35);
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string>ЧСС</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>500</y>
+      <width>351</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(28, 31, 35);
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string>Зубці</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonGen">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>600</y>
+      <width>101</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(28, 31, 35);
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+	border-style: outset;
+	border-width: 2px;
+	border-color:rgb(20, 22, 25)
+}
+
+QPushButton:hover {
+	background-color: rgb(41, 46, 52);
+}
+
+QPushButton:pressed {
+	background-color: rgb(33, 37, 42);
+}</string>
+    </property>
+    <property name="text">
+     <string>Generate</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

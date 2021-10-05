@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1050</width>
+    <height>765</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(38, 41, 45);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame_header">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1051</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 10px;
+background-color: rgb(28, 31, 35)</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>6</y>
+       <width>148</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(160, 160, 160)</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string>AI Lab2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_exp">
+     <property name="geometry">
+      <rect>
+       <x>1006</x>
+       <y>8</y>
+       <width>15</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgb(0, 170, 0);
+	border-radius: 7px;
+	text-align: center;
+}
+
+QPushButton:hover{
+	background-color: rgb(0, 111, 0);
+}
+
+QPushButton:pressed{
+	background-color: rgb(0, 153, 0);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_close">
+     <property name="geometry">
+      <rect>
+       <x>1030</x>
+       <y>8</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgb(255, 0, 0);
+	border-radius: 8px;
+	text-align: center;
+}
+
+QPushButton:hover{
+	background-color: rgb(175, 0, 0);
+}
+
+QPushButton:pressed{
+	background-color: rgb(229, 0, 0);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>40</y>
+      <width>541</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Horoscope</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>260</y>
+      <width>761</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(E:/Python Projects/ArtificialIntelligence/lab2/bg.jpg);
+border-radius:20px;</string>
+    </property>
+    <widget class="QLabel" name="label_sign">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>170</y>
+       <width>71</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+color: rgb(87, 21, 191)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_date">
+     <property name="geometry">
+      <rect>
+       <x>231</x>
+       <y>0</y>
+       <width>321</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_text">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>271</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_sign_name">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_text_2">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>70</y>
+       <width>271</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+    </widget>
+    <zorder>label_date</zorder>
+    <zorder>label_sign</zorder>
+    <zorder>label_text</zorder>
+    <zorder>label_sign_name</zorder>
+    <zorder>label_text_2</zorder>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>670</y>
+      <width>731</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="pushButton2_2">
+       <property name="maximumSize">
+        <size>
+         <width>161</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+       </property>
+       <property name="text">
+        <string>Today</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton2_3">
+       <property name="maximumSize">
+        <size>
+         <width>161</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+       </property>
+       <property name="text">
+        <string>For a week</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton2_4">
+       <property name="maximumSize">
+        <size>
+         <width>161</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>14</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+       </property>
+       <property name="text">
+        <string>For a month</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>1021</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>50</y>
+        <width>1011</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton1">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♒</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton2">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♓</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton3">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♈</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton4">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♉</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton5">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♊</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton6">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♋</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton7">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♌</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton8">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♍</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton9">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♎</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton10">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♏</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton11">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♐</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton12">
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>51</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Bodoni MT Black</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+         </property>
+         <property name="text">
+          <string>♑</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>1011</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Aquarius</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>The Fish</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>The Ram</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>The Bull</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>The Twins</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_14">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Cancer</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_17">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>The Lion</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_16">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Virgo</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_15">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>The Scales</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_13">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Scorpio</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>The Archer</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="maximumSize">
+          <size>
+           <width>111</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Goat-Corned</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>50</y>
+        <width>371</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;
+border-radius: 15px;
+background-color: rgb(28, 31, 35);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>enter birthdate (DD.MM.YYYY)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonSend">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>62</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bodoni MT Black</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+      </property>
+      <property name="text">
+       <string>➤</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>260</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+    </property>
+    <property name="text">
+     <string>-&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>260</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: #5F15A9;
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+	background-color: rgb(81, 16, 145);
+}
+
+QPushButton:pressed {
+	background-color: rgb(68, 14, 121);
+}</string>
+    </property>
+    <property name="text">
+     <string>&lt;-</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
