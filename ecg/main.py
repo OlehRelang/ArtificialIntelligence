@@ -9,8 +9,8 @@ import random
 
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
-from ui_lab3 import *
-from ui_lab4 import *
+from main_window import *
+from sub_window import *
 
 random.seed(11)
 plt.style.use('dark_background')
@@ -62,6 +62,16 @@ class SubWindow(QMainWindow):
         self.rng = [random.randint(0, 1) for i in range(self.ui.spinBoxCount.value())]
 
         self.ui.AlternationHorisontalSlider.valueChanged.connect(self.draw_extend)
+        self.ui.NoiseHorizontalSlider.valueChanged.connect(self.draw_extend)
+
+        self.ui.pushButtonFilt.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
+        self.ui.pushButtonFilt_2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+
+        self.ui.AlphaHorizontalSlider.valueChanged.connect(lambda: self.ui.label_alp.setText(f"{self.ui.AlphaHorizontalSlider.value()/100}"))
+        self.ui.WidthHorizontalSlider.valueChanged.connect(lambda: self.ui.label_wdth.setText(f"{self.ui.WidthHorizontalSlider.value()}"))
+
+        self.ui.radioButton.toggled.connect(self.exp_filter)
+        self.ui.radioButton_2.toggled.connect(self.float_width)
 
         self.show()
 
@@ -78,12 +88,22 @@ class SubWindow(QMainWindow):
         for i in range(self.ui.spinBoxCount.value()):
             y = np.append(y, self.y if self.rng[i] else y_alternate)
 
+        y = y + np.random.normal(0, self.ui.NoiseHorizontalSlider.value()/100, len(y))
+
         self.sub_canvas.ax.cla()
         self.sub_canvas.ax.grid(True, which='major', color='#c2c2c2', linestyle="-")
         self.sub_canvas.ax.minorticks_on()
         self.sub_canvas.ax.set_ylim(min(self.y) - 0.1, max(self.y) + 0.1)
         self.sub_canvas.ax.plot(x, y, color="white", linewidth=1.5)
         self.sub_canvas.draw()
+
+    def exp_filter(self):
+        self.ui.AlphaHorizontalSlider.setEnabled(True)
+        self.ui.WidthHorizontalSlider.setDisabled(True)
+
+    def float_width(self):
+        self.ui.AlphaHorizontalSlider.setDisabled(True)
+        self.ui.WidthHorizontalSlider.setEnabled(True)
 
     def mousePressEvent(self, event):
 
