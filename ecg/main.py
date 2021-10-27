@@ -9,10 +9,11 @@ import random
 
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
-from main_window import *
-from sub_window import *
+from main_window_ui import *
+from sub_window_ui import *
 
 random.seed(11)
+np.random.seed(3)
 plt.style.use('dark_background')
 plt.rc('axes', axisbelow=True)
 
@@ -67,15 +68,15 @@ class SubWindow(QMainWindow):
         self.ui.pushButtonFilt.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
         self.ui.pushButtonFilt_2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
 
-        self.ui.AlphaHorizontalSlider.valueChanged.connect(lambda: self.ui.label_alp.setText(f"{self.ui.AlphaHorizontalSlider.value()/100}"))
-        self.ui.WidthHorizontalSlider.valueChanged.connect(lambda: self.ui.label_wdth.setText(f"{self.ui.WidthHorizontalSlider.value()}"))
+        self.ui.AlphaHorizontalSlider.valueChanged.connect(self.exp_filter)
+        self.ui.WidthHorizontalSlider.valueChanged.connect(self.float_filter)
 
-        self.ui.radioButton.toggled.connect(self.exp_filter)
-        self.ui.radioButton_2.toggled.connect(self.float_width)
+        self.ui.radioButton.toggled.connect(self.exp_switch)
+        self.ui.radioButton_2.toggled.connect(self.float_switch)
 
         self.show()
 
-    def draw_extend(self):
+    def draw_extend(self, **kwargs):
         y_alternate = np.copy(self.y)
         temp = self.t[int(self.T.t1 * 1000): int(self.T.t2 * 1000)]
         y_alternate[int(self.T.t1 * 1000): int(self.T.t2 * 1000)] = \
@@ -93,15 +94,43 @@ class SubWindow(QMainWindow):
         self.sub_canvas.ax.cla()
         self.sub_canvas.ax.grid(True, which='major', color='#c2c2c2', linestyle="-")
         self.sub_canvas.ax.minorticks_on()
-        self.sub_canvas.ax.set_ylim(min(self.y) - 0.1, max(self.y) + 0.1)
-        self.sub_canvas.ax.plot(x, y, color="white", linewidth=1.5)
+        self.sub_canvas.ax.set_xlim(0, max(x) + 0.001)
+        self.sub_canvas.ax.set_ylim(min(self.y) - 0.1, max(self.y) + 0.3)
+
+        if self.ui.radioButton.isChecked():
+            z0 = np.copy(y)
+
+            for i in range(1, len(z0)):
+                z0[i] = z0[i - 1] + kwargs['alpha'] * (y[i] - z0[i - 1])
+
+            self.sub_canvas.ax.plot(x, z0, color="white", linewidth=1.5)
+
+        elif self.ui.radioButton_2.isChecked():
+            z0 = np.copy(y)
+
+            for i in range(kwargs['width'], len(y) - kwargs['width']):
+                z0[i] = z0[i - 1] + 1/(1 + 2*kwargs['width']) * (y[i + kwargs['width']] - y[i - 1 - kwargs['width']])
+
+            self.sub_canvas.ax.plot(x, z0, color="white", linewidth=1.5)
+
+        else:
+            self.sub_canvas.ax.plot(x, y, color="white", linewidth=1.5)
+
         self.sub_canvas.draw()
 
     def exp_filter(self):
+        self.ui.label_alp.setText(f"{self.ui.AlphaHorizontalSlider.value()/100}")
+        self.draw_extend(alpha=self.ui.AlphaHorizontalSlider.value()/100)
+
+    def float_filter(self):
+        self.ui.label_wdth.setText(f"{self.ui.WidthHorizontalSlider.value()}")
+        self.draw_extend(width=self.ui.WidthHorizontalSlider.value())
+
+    def exp_switch(self):
         self.ui.AlphaHorizontalSlider.setEnabled(True)
         self.ui.WidthHorizontalSlider.setDisabled(True)
 
-    def float_width(self):
+    def float_switch(self):
         self.ui.AlphaHorizontalSlider.setDisabled(True)
         self.ui.WidthHorizontalSlider.setEnabled(True)
 
