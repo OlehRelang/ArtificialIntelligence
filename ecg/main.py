@@ -65,8 +65,8 @@ class SubWindow(QMainWindow):
         self.ui.AlternationHorisontalSlider.valueChanged.connect(self.draw_extend)
         self.ui.NoiseHorizontalSlider.valueChanged.connect(self.draw_extend)
 
-        self.ui.pushButtonFilt.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
-        self.ui.pushButtonFilt_2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
+        self.ui.pushButtonFilt.clicked.connect(self.forward)
+        self.ui.pushButtonFilt_2.clicked.connect(self.back)
 
         self.ui.AlphaHorizontalSlider.valueChanged.connect(self.exp_filter)
         self.ui.WidthHorizontalSlider.valueChanged.connect(self.float_filter)
@@ -133,6 +133,20 @@ class SubWindow(QMainWindow):
     def float_switch(self):
         self.ui.AlphaHorizontalSlider.setDisabled(True)
         self.ui.WidthHorizontalSlider.setEnabled(True)
+
+    def forward(self):
+        self.ui.stackedWidget.setCurrentIndex(1)
+        self.ui.radioButton.setCheckable(True)
+        self.ui.radioButton_2.setCheckable(True)
+
+    def back(self):
+        self.ui.stackedWidget.setCurrentIndex(0)
+        self.ui.radioButton.setCheckable(False)
+        self.ui.radioButton_2.setCheckable(False)
+        self.ui.AlphaHorizontalSlider.setDisabled(True)
+        self.ui.AlphaHorizontalSlider.setValue(0)
+        self.ui.WidthHorizontalSlider.setDisabled(True)
+        self.ui.WidthHorizontalSlider.setValue(0)
 
     def mousePressEvent(self, event):
 
