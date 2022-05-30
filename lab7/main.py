@@ -139,7 +139,6 @@ class PortraitMainWindow(QMainWindow):
                     continue
                 else:
                     result[i][j] = hausdorff_distance(self.portraits[i], self.portraits[j])
-
         print(result)
         self.data = result
         self.model = TableModel(self.data)

@@ -129,7 +129,7 @@ class StatsWindow(QMainWindow):
         mo = mode(self.rhythm)
         amo = np.sum(np.where(self.rhythm == mo, 1, 0))/len(self.rhythm) * 100
         h = np.max(self.rhythm) - np.min(self.rhythm)
-        pi = amo/(2*mo*sdnn)
+        pi = amo/(2*mo*h*10**(-6))
         print(pi)
 
         data = [[hr, nn, sdnn, mo, amo, h, pi]]
